@@ -24,12 +24,19 @@
     --hover-shadow: 0 15px 40px rgba(212, 175, 55, 0.15);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+ * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent; /* Disable blue overlay */
+    }
+    a, button, img {
+        -webkit-tap-highlight-color: transparent; /* Ensure no overlay on interactive elements */
+    }
+    a:active, button:active {
+        outline: none; /* Prevent active outline */
+        background: none; /* Remove background changes */
+    }
 html {
     scroll-behavior: smooth;
 }
